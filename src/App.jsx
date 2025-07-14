@@ -1,11 +1,11 @@
-import Weather from "./Weather"
+import Weather from "./Components/Weather"
 import RainDrops from "./Components/RainDrops"
 
 function App() {
  
 
   return (
- <div className="relative">
+ <div >
       <Weather/>
       
     </div>

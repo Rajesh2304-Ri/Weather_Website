@@ -1,5 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import WeatherImage from '../assets/Weather5.jpg'
+
 
 
 const Weather = () => {
@@ -35,15 +37,15 @@ const Weather = () => {
 
 
 return (
-  <div className='bg-black p-20 h-screen'>
-    <div className='space-y-2 p-10 bg-[#5ade4b] border rounded-md '>
+  <div className=' p-20 h-screen  bg-contain ' style={{backgroundImage:`url(${WeatherImage})`,backgroundSize:"cover", backgroundPosition:"center"}}>
+    <div className='space-y-2 p-10  border rounded-md  '>
       <h1 className='text-2xl font-semibold'>Weather Report</h1>
       <p className='text-gray-500'>I can give you aweather report about your city</p>
       <input onChange={handleChange} value={city} type='text' placeholder='Enter you City' className='border border-gray-500 rounded-lg p-1' /><br></br>
       <button onClick={getReport} className='bg-black p-2 text-white px-2 py-2 border rounded-md hover:active:bg-gray-900'>Get Report</button>
-      <h2 className='text-md font-bold'>Weather:<span className='text-base  font-medium text-pink-800'> {weather}</span></h2>
-      <h2 className='text-md font-bold'>Temperature:<span className='text-base  font-medium text-pink-800'> {temp}</span></h2>
-      <h2 className='text-md font-bold'>Description:<span className='text-base  font-medium text-pink-800'> {desc}</span></h2>
+      <h2 className='text-md font-bold'>Weather:<span className='text-base  font-medium text-white'> {weather}</span></h2>
+      <h2 className='text-md font-bold'>Temperature:<span className='text-base  font-medium  text-white'> {temp}</span></h2>
+      <h2 className='text-md font-bold'>Description:<span className='text-base  font-medium  text-white'> {desc}</span></h2>
     </div>
   </div>
 )
